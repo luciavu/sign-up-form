@@ -208,6 +208,20 @@ p {
     margin-top: 1.2rem;
 }
 
+a {
+    color: rgb(34, 0, 237)
+}
+
+.password i {
+    color: #cccccc;
+    position: absolute;
+    font-size: 1.1rem;
+    top: 50%;
+    right: 0.5rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
 button {
     background-color: rgb(34, 0, 237);
     font-weight: 600;
@@ -221,13 +235,14 @@ button {
 
 .form-row {
     display: flex;
-    gap: 2rem;
+    gap: 4rem;
     align-items: center;
 }
+
 .form-group {
     position: relative;
+    width: 100%;
     margin-bottom: 3.3rem;
-    margin-right: 2rem;
 }
 
 label {
@@ -246,11 +261,9 @@ input {
     font-size: 1rem;
     border: 0.1rem solid #cccccc;
     border-radius: 0.5rem;
-    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 input:invalid {
     border-color: rgb(255, 70, 70);
     color: rgb(255, 70, 70);
 }
-
