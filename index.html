@@ -23,26 +23,26 @@
 
 
         <div class="form-container">
-            <form action="">
+            <form class="form" action="">
                 <h1>Sign up</h1>
                 <p>Already have an account? <a href="">Log in</a></p>
                 <div class="form-row">
                     <div class="form-group">
                         <label for="first_name">FIRST NAME*</label>
-                        <input type="text" name="first_name" id="first_name" autofocus required>
+                        <input class="unfilled" type="text" name="first_name" id="first_name" autofocus required>
                     </div>
                     <div class="form-group">
                         <label for="last_name">LAST NAME*</label>
-                        <input type="text" name="last_name" id="last_name" required></div>
+                        <input class="unfilled" type="text" name="last_name" id="last_name" required></div>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
                         <label for="email">EMAIL*</label>
-                        <input type="email" name="email" id="email" required>
+                        <input class="unfilled" type="email" name="email" id="email" required>
                     </div>
                     <div class="form-group">
                         <label for="phone">PHONE*</label>
-                        <input type="tel" name="phone" id="phone" required
+                        <input class="unfilled" type="tel" name="phone" id="phone" required
                         pattern="^\d{10}$">
                     </div>
                 </div>
@@ -50,15 +50,17 @@
                     <div class="form-group password">
                         <label for="password">PASSWORD*</label>
                         <div class="password-input-container">
-                            <input type="password" name="password" id="password" required
+                            <input class="unfilled" type="password" name="password" id="password" required
                             minlength="8" maxlength="12">
                             <i class="icon-eye-off"></i>
-                        </div>     
+                            <span>*min 8 characters</span> 
+                        </div>
+                        
                     </div>
                     <div class="form-group password">
                         <label for="confirm_password">CONFIRM PASSWORD*</label>
                         <div class="password-input-container">
-                            <input type="password" name="confirm_password" id="confirm_password" required
+                            <input class="unfilled" type="password" name="confirm_password" id="confirm_password" required
                             minlength="8" maxlength="12">
                         </div>
                     </div>

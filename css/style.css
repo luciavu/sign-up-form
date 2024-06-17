@@ -134,6 +134,10 @@ body {
         width: 50%;
     }
 
+    .form-row .password i {
+        right: 0.5rem;
+    }
+
     .form-container form p, .form-container form a {
         font-size: 0.8rem;
         margin-bottom: 2rem;
@@ -212,12 +216,20 @@ a {
     color: rgb(34, 0, 237)
 }
 
+form span {
+    position: absolute;
+    bottom: -1rem;
+    left: 0rem;
+    font-size: 0.7rem;
+    color:rgb(144, 144, 144)
+}
+
 .password i {
     color: #cccccc;
     position: absolute;
     font-size: 1.1rem;
     top: 50%;
-    right: 0.5rem;
+    right: -0.5rem;
     transform: translateY(-50%);
     cursor: pointer;
 }
@@ -263,7 +275,7 @@ input {
     border-radius: 0.5rem;
 }
 
-input:invalid {
+input:not(.unfilled):invalid {
     border-color: rgb(255, 70, 70);
     color: rgb(255, 70, 70);
 }
