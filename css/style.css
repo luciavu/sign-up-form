@@ -1,0 +1,256 @@
+* {
+    font-family: Inter, Arial, Impact;
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;   
+}
+
+@media only screen and (min-width: 2000px) {
+    * {
+        font-size: 36px;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 12.5px;
+    }
+
+    html body {
+        background-image: none;
+    }
+
+    .main-container .info-container {
+        display: contents;
+        width: 100%;
+    }
+
+    .main-container .info-container .company-logo {
+        display: flex;
+        position: static;
+        left: 0;
+        top: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .company-logo i {
+        font-size: 3rem;
+        color: black;
+    }
+
+    .main-container .form-container {
+        height: 85%;
+    }
+
+    .form-container form {
+        width: 100%;
+    }
+
+    form .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .form h1 {
+        font-size: 3rem;
+    }
+    .form-group label {
+        font-size: 0.7rem;
+    }
+
+    .form-container  button {
+        width: 70%;
+    }
+}
+
+
+@media only screen and (max-width: 1025px) {
+
+    * {
+        font-size: 13.4px;
+    }
+
+    body {
+        background-image: url(../img/main-visual1.jpg);
+        background-size: cover;
+    }
+    body .main-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .info-container .company-logo {
+        position: fixed;
+        left: 0.5rem;
+        width: 100%;
+        top: 0.5rem;
+    }
+
+    .company-logo span {
+        display: none;
+    }
+
+    .info-container img {
+        display:none;
+    }
+
+    .main-container .form-container {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form-container form {
+        width: 50%;
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        border-radius: 2rem;
+    }
+
+    .form-container form h1 {
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    form .form-group {
+        margin: 1rem 0rem;
+    }
+
+    input {
+        box-sizing: border-box;
+    }
+
+    form button {
+        margin-top: 1rem;
+        width: 50%;
+    }
+
+    .form-container form p, .form-container form a {
+        font-size: 0.8rem;
+        margin-bottom: 2rem;
+        padding: 0;
+    }
+    .company-logo {
+        z-index: 1;
+    }   
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.info-container {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+}
+
+.company-logo {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    color: white;
+}
+
+.company-logo span {
+    font-size: 3rem;
+    letter-spacing: 0.1rem;
+}
+
+i {
+    color: white;
+    font-size: 3rem;
+}
+
+.form-container {
+    display: flex;
+    width:60%;
+    height: 100%;
+    font-weight: 800;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    background-color: white;
+    padding: 3.5rem;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+    padding-top: 4rem;
+    font-size: 3rem;
+    color: rgb(34, 0, 237);
+}
+
+p {
+    padding-bottom: 2rem;
+    margin-top: 1.2rem;
+}
+
+button {
+    background-color: rgb(34, 0, 237);
+    font-weight: 600;
+    border: none;
+    border-radius: 1.3rem;
+    padding: 0.8rem 2rem;
+    margin-top: -1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+.form-row {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+.form-group {
+    position: relative;
+    margin-bottom: 3.3rem;
+    margin-right: 2rem;
+}
+
+label {
+    position: absolute;
+    top: -0.35rem;
+    left: 0.75rem;
+    background-color: #ffffff;
+    padding:0 0.5rem;
+    font-size: 0.75rem;
+    color: #333333;
+}
+
+input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 0.1rem solid #cccccc;
+    border-radius: 0.5rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:invalid {
+    border-color: rgb(255, 70, 70);
+    color: rgb(255, 70, 70);
+}
+
