@@ -1,26 +1,28 @@
 function revealPassword() {
+    // Allow users to check their password
     const passwordButton = document.querySelector('.icon-eye-off');
-    passwordButton.addEventListener('click', function() {
-    const passwordField = document.getElementById('password');
-    const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
-    passwordField.setAttribute('type', type);
-    
-    if (type === 'password') {
-        passwordButton.classList.remove('icon-eye-off');
-        passwordButton.classList.add('icon-eye');
-    } else {
-        passwordButton.classList.remove('icon-eye');
-        passwordButton.classList.add('icon-eye-off');
-    };
 
-})};
+    passwordButton.addEventListener('click', function() {
+        // Change input type to text or password depending on current type
+        const passwordField = document.getElementById('password');
+        const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordField.setAttribute('type', type);
+        
+        if (type === 'password') {
+            passwordButton.classList.remove('icon-eye-off');
+            passwordButton.classList.add('icon-eye');
+        } else {
+            passwordButton.classList.remove('icon-eye');
+            passwordButton.classList.add('icon-eye-off');
+        }
+    })
+};
 
 function inputValidation() {
     const form = document.querySelector('.form');
     const inputs = form.querySelectorAll('input');
-    console.log(inputs);
 
-
+    // If inputs are empty, don't give red error borders
     inputs.forEach(input => {
         input.addEventListener("input", function() {
             if (input.value.trim() === '') {
@@ -28,8 +30,8 @@ function inputValidation() {
             } else {
                 input.classList.remove('unfilled');
             }
-        });
-    });
+        })
+    })
 };
 
 function passwordMatches() {
@@ -46,8 +48,7 @@ function passwordMatches() {
         }
     } else {
         confirmPassword.classList.remove('match', 'nomatch');
-    }
-    
+    } 
 };
 
 function passwordValidation() {
@@ -57,12 +58,19 @@ function passwordValidation() {
     confirmPassword.addEventListener('input', passwordMatches);
 };
 
-function specifyError() {
-    const submitButton = document.getElementById('submitButton');
-    submitButton.addEventListener('click', function() {
-        //
-    })
-}
+function checkError(e) {
+    // Add error message when submitting
+    const confirmPassword = document.getElementById('confirm_password');
+    let errorMsg = document.querySelector('.error-msg');
+
+    // Password does not match
+    if (confirmPassword.classList.contains('nomatch')) {
+        e.preventDefault();
+        errorMsg.innerHTML = "Passwords do not match";
+    } else {
+        console.log('Success');
+    }
+};
 
 function addEventListeners() {
     revealPassword();
@@ -72,6 +80,4 @@ function addEventListeners() {
     passwordValidation();
 };
 
-
 addEventListeners();
-

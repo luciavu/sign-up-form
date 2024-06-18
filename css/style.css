@@ -70,7 +70,6 @@ body {
 
 
 @media only screen and (max-width: 1025px) {
-
     * {
         font-size: 13.4px;
     }
@@ -145,7 +144,20 @@ body {
     }
     .company-logo {
         z-index: 1;
-    }   
+    }
+
+    .button-group {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button-group .error-msg {
+        margin-top: 1.6rem;
+    }
+
+    .button-group button {
+        width: 100%;
+    }
 }
 
 .main-container {
@@ -202,7 +214,7 @@ form {
 
 h1 {
     margin: 0;
-    padding-top: 4rem;
+    padding-top: 2rem;
     font-size: 3rem;
     color: rgb(34, 0, 237);
 }
@@ -278,4 +290,20 @@ input {
 input:not(.unfilled):invalid {
     border-color: rgb(255, 70, 70);
     color: rgb(255, 70, 70);
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    margin-top: 0.6rem;
+    width: 30%;
+}
+
+.error-msg {
+    margin-top: -0.7rem;
+    font-size: 0.9rem;
+    color: red;
 }
