@@ -16,7 +16,6 @@ function revealPassword() {
 })};
 
 function inputValidation() {
-    // Prevents all inputs to be red from the start
     const form = document.querySelector('.form');
     const inputs = form.querySelectorAll('input');
     console.log(inputs);
@@ -33,15 +32,46 @@ function inputValidation() {
     });
 };
 
+function passwordMatches() {
+    const password = document.getElementById('password');
+    const confirmPassword = document.getElementById('confirm_password');
+
+    if (password.value.length >= 8) {
+        if (confirmPassword.value !== password.value) {
+            confirmPassword.classList.remove('match');
+            confirmPassword.classList.add('nomatch');
+        } else {
+            confirmPassword.classList.remove('nomatch');
+            confirmPassword.classList.add('match');
+        }
+    } else {
+        confirmPassword.classList.remove('match', 'nomatch');
+    }
+    
+};
+
+function passwordValidation() {
+    const password = document.getElementById('password');
+    const confirmPassword = document.getElementById('confirm_password');
+    password.addEventListener('input', passwordMatches);
+    confirmPassword.addEventListener('input', passwordMatches);
+};
+
 function specifyError() {
     const submitButton = document.getElementById('submitButton');
+    submitButton.addEventListener('click', function() {
+        //
+    })
 }
 
 function addEventListeners() {
     revealPassword();
+    // Prevent all inputs to be red from the start 
     inputValidation();
-
+    // Check password matches and correct length
+    passwordValidation();
 };
 
 
 addEventListeners();
+
