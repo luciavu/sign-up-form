@@ -72,12 +72,30 @@ function checkError(e) {
     }
 };
 
+function formatPhone() {
+    // Format phone: 0123 456 789
+    const phoneInput = document.getElementById('phone');
+    phoneInput.addEventListener('input', function() {
+        let trimmedValue = phoneInput.value.replace(/\s/g, ''); // Remove existing spaces
+        if (trimmedValue.length > 4 && trimmedValue.length <= 7) {
+            trimmedValue = `${trimmedValue.slice(0, 4)} ${trimmedValue.slice(4)}`;
+        } else if (trimmedValue.length > 7) {
+            trimmedValue = `${trimmedValue.slice(0, 4)} ${trimmedValue.slice(4, 7)} ${trimmedValue.slice(7)}`;
+        }
+        phoneInput.value = trimmedValue;
+    });
+}
+
+
+
 function addEventListeners() {
     revealPassword();
     // Prevent all inputs to be red from the start 
     inputValidation();
     // Check password matches and correct length
     passwordValidation();
+    // Format phone string as user inputs
+    formatPhone();
 };
 
 addEventListeners();
