@@ -6,7 +6,7 @@ Developing a sign-up form with input validation, including password matching and
 ## Preview
 ![alt text](img/preview.png)
 ## Links
-Live Link: https://github.com/luciavu/sign-up-form
+Live Link: https://luciavu.github.io/sign-up-form/
 
 Assignment: https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form
 ## Credits
