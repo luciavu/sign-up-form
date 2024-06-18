@@ -9,3 +9,8 @@ Developing a sign-up form with input validation, including password matching and
 Live Link: https://github.com/luciavu/sign-up-form
 
 Assignment: https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form
+## Credits
+Image from Kai Dahms on Unsplash: https://unsplash.com/@dilucidus
+
+
+Icons from Fontello: https://fontello.com/
